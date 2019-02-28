@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import 'layout.css';
+@import 'fonts.css';
+
+html
+{
+	counter-reset: section;
+	font-size: 12pt;
+}
+
+h2::before
+{
+	margin-right: 1em;
+	counter-increment: section;
+	content: counter(section);
+}
+
+nav.top
+{
+	font-family: 'Roboto Slab', sans-serif;
+	text-align: center;
+	margin-top: 12ex;
+	margin-bottom: 6ex;
+}
+
+nav.top a
+{
+	font-style: oblique;
+	font-weight: 100;
+	color: inherit;
+}
+
+body
+{
+	font-family: 'Roboto', serif;
+	color: black;
+	background-color: #F1F1F1;
+}
+
+code
+{
+	font-family: 'Roboto Mono', monospace;
+}
+
+.comment
+{
+	font-style: italic;
+}
+
+pre
+{
+	tab-size: 2;
+	-moz-tab-size: 2;
+}
