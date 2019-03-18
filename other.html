@@ -5,21 +5,31 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-	<header>Other</header>
+	<header><h1 text="Other">Other</h1></header>
 	<aside>
 	<nav class="top">
+		<hr />
+		<a href="index.html">Home</a>
 		<a href="https://www.google.com">Another Page</a>
+		<hr />
 	</nav>
 	</aside>
 	<p>Welcome to my site.</p>
 	<h2>Computer Programs</h2>
 	<p>Here is a great function I found out about.</p>
-	<blockquote><pre><code>let rec advance x f n =
-	if n = 0 then x
-	else if n mod 2 = 0 then advance x (compose f f) (n / 2)
-	else advance (f x) (compose f f) (n / 2)</code></pre></blockquote>
+	<blockquote><pre><code><span class="keyword">let</span> <span class="keyword">rec</span> advance x f n =
+	<span class="comment">(* If n = 0, we're done. *)</span>
+	<span class="keyword">if</span> n = 0 <span class="keyword">then</span> x
+	<span class="keyword">else</span>
+		<span class="keyword">let</span> x =
+			<span class="keyword">if</span> n mod 2 = 0 <span class="keyword">then</span> x
+			<span class="keyword">else</span> f x
+		<span class="keyword">in</span>
+		<span class="keyword">let</span> f = compose f f <span class="keyword">in</span>
+		<span class="keyword">let</span> n = n / 2 <span class="keyword">in</span>
+		advance x f n</code></pre></blockquote>
 	<p>How about that?</p>
-	<p>Now let me tell you about polynomials of the form <var>a</var>&InvisibleTimes;<var>x</var><sup>2</sup> + <var>b</var>&InvisibleTimes;<var>x</var> + <var>c</var>.</p>
+	<p>Now let me tell you about polynomials of the form <var>a</var>&InvisibleTimes;<var>x</var><sup>2</sup> + <var>b</var>&InvisibleTimes;<var>x</var> + <var>c</var>.  Also known as polynomials of the form <math><mi>f</mi></math>.  Here's a fresh link: <a href="https://www.ou.edu/">Wikipedia</a>.</p>
 	<h2>Lorem Ipsum</h2>
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lacinia ex, id feugiat tortor. Mauris gravida nunc vel lacus tincidunt posuere. Ut cursus aliquam odio, a pretium neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut velit sem, aliquam vestibulum purus aliquet, eleifend semper sapien. Nam tempus congue metus sit amet rhoncus. Nunc tempor fringilla laoreet. Etiam ultricies, risus vitae varius pulvinar, leo arcu ultrices nunc, vitae aliquet tortor lectus vitae libero. Donec congue euismod turpis non imperdiet.</p>
 	<p>In porttitor dictum nunc, nec dignissim nisi. Morbi dictum orci sit amet sapien consequat congue. Curabitur sollicitudin volutpat augue id imperdiet. Nam molestie ex a accumsan dictum. Quisque ac vulputate ex. Nulla maximus, tortor id placerat aliquam, est lacus finibus ipsum, nec faucibus diam leo sit amet ligula. Pellentesque fermentum, sapien eu pretium sagittis, mauris tortor varius mi, sed aliquet enim arcu in sem. Praesent sodales leo accumsan cursus euismod. Nulla dictum porttitor ligula sit amet facilisis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce feugiat diam ante. Integer dolor risus, molestie ut est eu, tristique blandit libero. Quisque eleifend luctus sapien id commodo.</p>

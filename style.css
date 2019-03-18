@@ -1,54 +1,144 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+/* @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i|Cormorant+Infant:300,300i,400,400i,500,500i,600,600i,700,700i|Cormorant:300,300i,400,400i,500,500i,600,600i,700,700i|Cutive+Mono|EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i|Inconsolata:400,700|Lora:400,400i,700,700i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Overpass+Mono:300,400,600,700|Playfair+Display+SC:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Space+Mono:400,400i,700,700i');*/
 @import 'layout.css';
-@import 'fonts.css';
+/* @import 'fonts.css'; */
+
+@import url("https://use.typekit.net/hrf5ikq.css");
 
 html
 {
 	counter-reset: section;
-	font-size: 12pt;
+	font-size: 14pt;
 }
 
-h2::before
-{
-	margin-right: 1em;
-	counter-increment: section;
-	content: counter(section);
+body {
+	background-color: black;
+	color: lightgrey;
+	animation-name: load;
+	animation-timing-function: ease-in;
+	animation-duration: 60s;
 }
 
-nav.top
-{
-	font-family: 'Roboto Slab', sans-serif;
-	text-align: center;
-	margin-top: 12ex;
-	margin-bottom: 6ex;
+/* @font-face {
+	font-family: 'Larabiefont Regular';
+	src: url("font/Larabiefont Regular.woff");
+} */
+
+html {
+	font-family: gill-sans-nova, sans-serif;
 }
 
-nav.top a
-{
-	font-style: oblique;
-	font-weight: 100;
-	color: inherit;
+code {
+	font-family: larabiefont, monospace;
+	font-weight: 400;
+	font-style: normal;
+	-moz-tab-size: 2;
+	tab-size: 2;
+	color: whitesmoke;
 }
 
-body
-{
-	font-family: 'Roboto', serif;
-	color: black;
-	background-color: #F1F1F1;
-}
-
-code
-{
-	font-family: 'Roboto Mono', monospace;
-}
-
-.comment
-{
+code .comment {
+	font-family: larabiefont, monospace;
+	font-weight: 400;
 	font-style: italic;
 }
 
-pre
-{
-	tab-size: 2;
-	-moz-tab-size: 2;
+code .keyword {
+	font-family: larabiefont, monospace;
+	font-weight: 700;
+	font-style: normal;
+	/* color: lightsteelblue; */
+}
+
+@keyframes title {
+	0% {
+		text-shadow: 0px 0px 50px whitesmoke;
+		color: steelblue;
+	}
+/*
+	50% {
+		text-shadow: 5px 0px 50px blue;
+	} */
+}
+
+@keyframes heading {
+	0% {
+		text-shadow: 10px 0px 25px white;
+	}
+}
+
+@keyframes load {
+	from {
+		background-color: #0A0A0A;
+	}
+	to {
+		background-color: black;
+	}
+}
+
+h1 {
+	font-family: gill-sans-nova-deco;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 600%;
+	color: steelblue;
+	text-shadow: 0px 0px 50px darkslateblue;
+	animation-name: title;
+  animation-duration: 5s;
+	animation-timing-function: ease-in;
+}
+
+h1::before {
+	content: "»";
+	margin-right: 0.5em;
+}
+
+h1::after {
+	content: "«";
+	margin-left: 0.5em;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: gill-sans-nova-inline, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	color: steelblue;
+	text-shadow: 0px 0px 15px steelblue;
+	/* animation-name: heading;
+	animation-duration: 5s; */
+}
+
+a:link {
+	color: inherit;
+	/* text-decoration-color: red; */
+}
+
+a:visited {
+	color: inherit;
+	/* text-decoration-color: darkred; */
+}
+
+h2 {
+	margin-top: 4ex;
+	margin-bottom: 0em;
+}
+
+nav {
+	font-style: oblique;
+	text-decoration: none;
+	text-align: center;
+	font-size: 125%;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+p {
+	margin-top: 0em;
+}
+
+hr {
+	border: 0 none;
+	height: 1px;
+	background-color: white;
 }
